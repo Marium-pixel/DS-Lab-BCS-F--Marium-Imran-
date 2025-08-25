@@ -5,7 +5,7 @@ details. As part of this exercise, intentionally omit the implementation of the 
 shallow copy, and observe any resulting issues?*/
 
 #include<iostream>
-#include<cstring>
+#include<cstring>//for strcopy 
 using namespace std;
 
 class Exam {
@@ -25,7 +25,7 @@ public:
         score = new int(s);
     }
 
-    // Destructor
+     
     ~Exam() {
         delete[] name;
         delete[] examdate;
@@ -52,5 +52,5 @@ int main() {
     e2.display();
 
     // When program ends, both destructors will try to free the same memory → crash / undefined behavior
-    //program has these simple and easy to solve methods but also crash alot because of runtime errors due to bad dma assigmnets
+    //program has these simple and easy to solve methods but also crash alot because of runtime errors due to bad dma -> shallow copy created and both the copies refer to the same space so runtime error occurs
 }
