@@ -47,7 +47,11 @@ int main() {
         cout<<"avegrage of student"<<i+1<<"is:"<<avg<<endl;
          }
     
-     
+      for(int i=0;i<students;i++){
+        delete[] std[i];
+    }
+
+    delete[] std;
 
 
 
