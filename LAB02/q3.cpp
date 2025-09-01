@@ -1,8 +1,10 @@
-   /*Task #4:
-Create a dynamic program that manages monthly expenses for a family.
-=> Use a 1D dynamic array to store expenses for n months.
-=> Add a feature to resize the array if the user wants to track more months later.
-=> Compute and display the total and average expenses.
+   /*Task #3:
+Design a program to handle marks of students in different courses using a jagged array
+(since each student is enrolled in a different number of courses).
+=> Input the number of courses each student takes.
+=> Dynamically allocate memory for each student accordingly.
+=> Calculate and display each student’s average marks.
+
 
 */
 #include <iostream>
