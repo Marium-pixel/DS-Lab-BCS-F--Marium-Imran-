@@ -8,8 +8,7 @@ struct Node {
     Node* right;
     Node(int val) : data(val), left(NULL), right(NULL) {}
 };
-
-// Insert into BST
+ 
 Node* insertBST(Node* root, int val) {
     if (root == NULL) return new Node(val);
 
@@ -20,21 +19,19 @@ Node* insertBST(Node* root, int val) {
 
     return root;
 }
-
-// Store inorder traversal
+ 
 void inorder(Node* root, vector<int>& arr) {
     if (root == NULL) return;
     inorder(root->left, arr);
     arr.push_back(root->data);
     inorder(root->right, arr);
 }
-
-// Function to find median
+ 
 float findMedian(Node* root) {
     if (root == NULL) return 0;
 
     vector<int> arr;
-    inorder(root, arr);  // gets sorted values
+    inorder(root, arr);  
 
     int n = arr.size();
 
@@ -52,8 +49,7 @@ float findMedian(Node* root) {
 
 int main() {
     Node* root = NULL;
-
-    // Example BST
+ 
     int values[] = {20, 10, 5, 15, 30, 25, 35};
     int n = sizeof(values) / sizeof(values[0]);
 
